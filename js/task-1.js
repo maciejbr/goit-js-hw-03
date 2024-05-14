@@ -1,5 +1,12 @@
 "use strict";
 
+function slugify(title) {
+  let slug;
+  let titleToLower = title.toLowerCase();
+  slug = titleToLower.replaceAll(" ", "-");
+  return slug;
+}
+
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
