@@ -2,17 +2,16 @@
 
 function makeArray(firstArray, secondArray, maxLength) {
   let newArray = [...firstArray, ...secondArray];
-  if (newArray.length > maxLength) {
-    return newArray.slice(0, maxLength);
-  } else {
-    return newArray;
-  }
+  return newArray.length > maxLength ? newArray.slice(0, maxLength) : newArray;
 }
 
 // function makeArray(firstArray, secondArray, maxLength) {
 //   let newArray = [...firstArray, ...secondArray];
-//   newArray =
-//     newArray.length > maxLength ? newArray.slice(0, maxLength) : newArray;
+//   if (newArray.length > maxLength) {
+//     return newArray.slice(0, maxLength);
+//   } else {
+//     return newArray;
+//   }
 // }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
